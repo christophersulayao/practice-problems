@@ -1,0 +1,42 @@
+<!--Build a function, random_range, that takes 2 parameters, -->
+<!--start_num and end_num.-->
+<!--OPTIONALLY: If start_num is an array instead -->
+<!--(and end_num isn't specified), -->
+<!--then it returns a random element from the array-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random_range</title>
+    <script>
+        function randomRange(start_num, end_num){
+            //need to find a range, and a range is the difference between
+            //the biggest number minus the smallest number.
+            //end_num - start_num = range
+
+            return Math.floor(Math.random() * (end_num - start_num))+ start_num;
+
+            //would have need to use math.Random
+            //but math.Random would return a random number between 0 and 1
+            //if i didn't want decimal places I would have to use math.Floor
+            //inside the math.floor method it takes in a parameter of the number
+            // you want to round down
+        }
+        randomRange(1,1000);
+
+        //return a random element from the array
+        //same concept, but don't need a range, but need the length of the array
+        function getRangeFromArray(randomArray){
+            return randomArray[Math.floor(Math.random() * randomArray.length)];
+        }
+        getRangeFromArray(['c','h','r','i','s']);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
